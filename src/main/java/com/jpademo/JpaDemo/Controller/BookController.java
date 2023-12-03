@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-    @RequestMapping("/book/v1/")
+    @RequestMapping("/book/v1")
 public class BookController {
 
     private BookDAO bookDAO;
