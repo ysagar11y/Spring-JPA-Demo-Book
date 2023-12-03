@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
+    @RequestMapping("/book/v1/")
 public class BookController {
 
     private BookDAO bookDAO;
@@ -27,6 +28,12 @@ public class BookController {
 
         System.out.println("Saving the book");
         bookDAO.save(tempBook);
+        return "success";
+    }
+     @PostMapping("/savedata")
+    public String getDailyWorkout(@RequestBody Books book){
+         if(book!=null)
+           bookDAO.save(book);
         return "success";
     }
 
