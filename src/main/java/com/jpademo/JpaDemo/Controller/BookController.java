@@ -32,10 +32,11 @@ public class BookController {
     }
 
     @PostMapping("/savedata")
-    public ResponseEntity getDailyWorkout(@RequestBody Books book) {
+    public ResponseEntity saveDailyWorkout(@RequestBody Books book) {
         if (book != null)
             bookDAO.save(book);
         return new ResponseEntity(book, HttpStatusCode.valueOf(201));
     }
+
 
 }
