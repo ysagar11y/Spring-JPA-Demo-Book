@@ -1,4 +1,4 @@
-package com.jpademo.JpaDemo.security;
+package com.jpademo.JpaDemo.security.dao;
 
 import org.springframework.security.core.userdetails.UserDetails;
 

@@ -1,6 +1,7 @@
 package com.jpademo.JpaDemo.security;
 
 import com.jpademo.JpaDemo.filter.JwtAuthenticationFilter;
+import com.jpademo.JpaDemo.security.dao.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

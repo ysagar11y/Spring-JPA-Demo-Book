@@ -2,10 +2,9 @@ package com.jpademo.JpaDemo.filter;
 
 import java.io.IOException;
 
-import com.jpademo.JpaDemo.security.JwtService;
-import com.jpademo.JpaDemo.security.UserService;
+import com.jpademo.JpaDemo.security.dao.JwtService;
+import com.jpademo.JpaDemo.security.dao.UserService;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContext;

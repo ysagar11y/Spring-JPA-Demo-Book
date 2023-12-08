@@ -1,4 +1,4 @@
-package com.jpademo.JpaDemo.security;
+package com.jpademo.JpaDemo.security.impl;
 
 import com.jpademo.JpaDemo.Entity.Role;
 import com.jpademo.JpaDemo.Entity.User;
@@ -6,6 +6,8 @@ import com.jpademo.JpaDemo.repository.UserRepository;
 import com.jpademo.JpaDemo.response.JwtAuthenticationResponse;
 import com.jpademo.JpaDemo.response.SignUpRequest;
 import com.jpademo.JpaDemo.response.SigninRequest;
+import com.jpademo.JpaDemo.security.dao.AuthenticationService;
+import com.jpademo.JpaDemo.security.dao.JwtService;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;

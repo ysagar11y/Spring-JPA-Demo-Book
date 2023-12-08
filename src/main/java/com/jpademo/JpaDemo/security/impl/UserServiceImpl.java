@@ -1,5 +1,6 @@
-package com.jpademo.JpaDemo.security;
+package com.jpademo.JpaDemo.security.impl;
 import com.jpademo.JpaDemo.repository.UserRepository;
+import com.jpademo.JpaDemo.security.dao.UserService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

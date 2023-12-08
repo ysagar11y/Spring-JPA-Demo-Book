@@ -3,7 +3,7 @@ package com.jpademo.JpaDemo.authController;
 import com.jpademo.JpaDemo.response.JwtAuthenticationResponse;
 import com.jpademo.JpaDemo.response.SignUpRequest;
 import com.jpademo.JpaDemo.response.SigninRequest;
-import com.jpademo.JpaDemo.security.AuthenticationService;
+import com.jpademo.JpaDemo.security.dao.AuthenticationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +18,7 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/api/v3/auth")
 @RequiredArgsConstructor/*
 
-'http://localhost:8080/api/v1/auth/signup' \
+'http://localhost:8080/api/v3/auth/signup' \
 body {
     "firstName":"vivek",
     "lastName":"vivekkumar",
@@ -26,7 +26,7 @@ body {
     "password": "1234"
 }
 
-'http://localhost:8080/api/v1/auth/signin' \
+'http://localhost:8080/api/v3/auth/signin' \
 '{
     "email": "vivek.kumar@gmail.com",
     "password": "1234"

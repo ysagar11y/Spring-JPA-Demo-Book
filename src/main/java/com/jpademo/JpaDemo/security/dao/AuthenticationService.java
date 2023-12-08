@@ -1,4 +1,4 @@
-package com.jpademo.JpaDemo.security;
+package com.jpademo.JpaDemo.security.dao;
 
 import com.jpademo.JpaDemo.response.JwtAuthenticationResponse;
 import com.jpademo.JpaDemo.response.SignUpRequest;
