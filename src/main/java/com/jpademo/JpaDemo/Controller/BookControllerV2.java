@@ -33,6 +33,14 @@ public class BookControllerV2 {
 
     }
 
+    @GetMapping("/book/{author}")
+    public ResponseEntity getSpecificUserByName(@PathVariable String author) throws NoBookFoundException {
+        Books book = bookRepository.findByAuthor(author);
+        log.info("Book found for required Id");
+        return new ResponseEntity(book,HttpStatusCode.valueOf(200));
+
+    }
+
     @PostMapping("/save")
     public ResponseEntity saveUser(@RequestBody Books book) throws WrongDataException {
         bookRepository.save(book);
