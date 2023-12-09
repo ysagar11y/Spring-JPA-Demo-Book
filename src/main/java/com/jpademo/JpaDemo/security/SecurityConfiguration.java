@@ -1,5 +1,7 @@
 package com.jpademo.JpaDemo.security;
 
+import com.jpademo.JpaDemo.exception.AuthEntryPointJwt;
+import com.jpademo.JpaDemo.exception.BookExceptionHandler;
 import com.jpademo.JpaDemo.filter.JwtAuthenticationFilter;
 import com.jpademo.JpaDemo.security.dao.UserService;
 import lombok.RequiredArgsConstructor;
@@ -24,11 +26,13 @@ import static org.springframework.security.config.http.SessionCreationPolicy.STA
 public class SecurityConfiguration {
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
     private final UserService userService;
+    private final AuthEntryPointJwt authEntryPointJwt;
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(request -> request.requestMatchers("/api/v3/auth/**","/error")
                         .permitAll().anyRequest().authenticated())
+                .exceptionHandling(ex->ex.authenticationEntryPoint(authEntryPointJwt))
                 .sessionManagement(manager -> manager.sessionCreationPolicy(STATELESS))
                 .authenticationProvider(authenticationProvider()).addFilterBefore(
                         jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
