@@ -1,5 +1,6 @@
 package com.jpademo.JpaDemo.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,6 +27,7 @@ public class User implements UserDetails {
     private String lastName;
     @Column(unique = true)
     private String email;
+    @JsonIgnore
     private String password;
 
     // not created separed table just enum

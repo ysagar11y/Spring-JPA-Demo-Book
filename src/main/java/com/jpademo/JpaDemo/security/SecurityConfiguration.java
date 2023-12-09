@@ -1,7 +1,6 @@
 package com.jpademo.JpaDemo.security;
 
 import com.jpademo.JpaDemo.exception.AuthEntryPointJwt;
-import com.jpademo.JpaDemo.exception.BookExceptionHandler;
 import com.jpademo.JpaDemo.filter.JwtAuthenticationFilter;
 import com.jpademo.JpaDemo.security.dao.UserService;
 import lombok.RequiredArgsConstructor;
