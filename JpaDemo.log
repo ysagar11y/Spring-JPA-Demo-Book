@@ -1,0 +1,34 @@
+2023-12-10 19:23:32 [restartedMain] INFO  c.jpademo.JpaDemo.JpaDemoApplication - Starting JpaDemoApplication using Java 19.0.1 with PID 2807 (/Users/vivekbhar/Documents/springbootProjects/Spring-JPA-Demo-Book/target/classes started by vivekbhar in /Users/vivekbhar/Documents/springbootProjects/Spring-JPA-Demo-Book)
+2023-12-10 19:23:32 [restartedMain] INFO  c.jpademo.JpaDemo.JpaDemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-10 19:23:32 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-10 19:23:32 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-10 19:23:32 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-10 19:23:32 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-12-10 19:23:32 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.jpademo.JpaDemo.repository.BookRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-12-10 19:23:32 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.jpademo.JpaDemo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-12-10 19:23:32 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 JDBC repository interfaces.
+2023-12-10 19:23:32 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-10 19:23:32 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-10 19:23:32 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 2 JPA repository interfaces.
+2023-12-10 19:23:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2023-12-10 19:23:33 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-10 19:23:33 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-10 19:23:33 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-10 19:23:33 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 638 ms
+2023-12-10 19:23:33 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-12-10 19:23:33 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31eefad1
+2023-12-10 19:23:33 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-12-10 19:23:33 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/boot'
+2023-12-10 19:23:33 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-10 19:23:33 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-10 19:23:33 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2023-12-10 19:23:33 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-10 19:23:33 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-10 19:23:33 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-10 19:23:34 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6c7673dc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16a45993, org.springframework.security.web.context.SecurityContextHolderFilter@65fabeab, org.springframework.security.web.header.HeaderWriterFilter@174c3362, org.springframework.web.filter.CorsFilter@5621ba1e, org.springframework.security.web.authentication.logout.LogoutFilter@1041a044, com.jpademo.JpaDemo.filter.JwtAuthenticationFilter@1d5c816a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d52b779, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@51c678f4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@dbdcb07, org.springframework.security.web.session.SessionManagementFilter@45714e37, org.springframework.security.web.access.ExceptionTranslationFilter@3bc7cd07, org.springframework.security.web.access.intercept.AuthorizationFilter@69d26f5e]
+2023-12-10 19:23:34 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-12-10 19:23:34 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2023-12-10 19:23:34 [restartedMain] INFO  c.jpademo.JpaDemo.JpaDemoApplication - Started JpaDemoApplication in 2.074 seconds (process running for 2.343)
+2023-12-10 19:23:43 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-10 19:23:43 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-12-10 19:23:43 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
