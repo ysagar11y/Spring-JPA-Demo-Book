@@ -7,6 +7,7 @@ import com.jpademo.JpaDemo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,19 +24,20 @@ public class BookControllerV3 {
     @Autowired UserRepository userRepository;
  //localhost:8080/api/v3/book/all
     @GetMapping("all")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAuthority('ROLE_USER')")
     public ResponseEntity getAllBooks(){
         List<Books> book = bookRepository.findAll();
         return ResponseEntity.ok(book);
     }
 
     @GetMapping("user")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity getUserBooks(){
         List<Books> book = bookRepository.findAll();
         return ResponseEntity.ok(book);
     }
     @GetMapping("get-user")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity getUser(){
         List<User> user = userRepository.findAll();
         return ResponseEntity.ok(user);
