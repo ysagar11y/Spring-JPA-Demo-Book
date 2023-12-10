@@ -2,6 +2,7 @@ package com.jpademo.JpaDemo.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,10 +24,13 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @NotNull(message = "user first name cannot be empty or null")
     private String firstName;
     private String lastName;
+    @NotNull(message = "user email cannot be empty or null")
     @Column(unique = true)
     private String email;
+    @NotNull(message = "user password cannot be empty or null")
     @JsonIgnore
     private String password;
 

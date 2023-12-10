@@ -12,7 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.io.IOException;
@@ -29,5 +31,13 @@ public class BookExceptionHandler {
     public ResponseEntity wrongBookData(Exception e) {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
     }
-
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(value = MethodArgumentNotValidException.class)
+    public Map<String, String> studentRequestValidation(MethodArgumentNotValidException e) {
+        Map<String, String> map = new HashMap<>();
+        e.getBindingResult().getFieldErrors().forEach(ex -> {
+            map.put(ex.getField(), ex.getDefaultMessage());
+        });
+        return map;
+    }
 }
