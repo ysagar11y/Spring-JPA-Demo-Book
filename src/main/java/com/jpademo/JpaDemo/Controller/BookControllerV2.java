@@ -29,7 +29,7 @@ public class BookControllerV2 {
         Books book = bookRepository.findById(id)
                 .orElseThrow(() -> new NoBookFoundException("No book found with the id " + id));
         log.info("Book found for required Id");
-        System.out.println("this");
+        System.out.println("this is the book id ");
         return ResponseEntity.ok(book);
 
     }
