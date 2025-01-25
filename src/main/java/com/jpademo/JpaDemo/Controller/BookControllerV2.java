@@ -33,6 +33,7 @@ public class BookControllerV2 {
         System.out.println("this is the book ");
         System.out.println("this is the book 6");
         System.out.println("this is the book 6");
+        System.out.println("this is the book 2");
         return ResponseEntity.ok(book);
 
     }
