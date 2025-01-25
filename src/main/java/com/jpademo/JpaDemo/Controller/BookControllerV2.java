@@ -31,6 +31,7 @@ public class BookControllerV2 {
         log.info("Book found for required Id");
         System.out.println("this is the book id ");
         System.out.println("this is the book ");
+        System.out.println("this is the book 3");
         return ResponseEntity.ok(book);
 
     }
